@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header class="header"></header>
+
+    <main class="container">
+        <div>
+        <div class="encriptador">
+            <div>
+                <textarea id="input-text" placeholder="Ingrese texto aquí..."></textarea>
+                <p id="error-message"></p>
+            </div>
+            <div class="advertencia">                
+                <img src="assets/bi_exclamation-circle-fill.png">
+                <p>Solo letras minúsculas y sin acentos</p>                
+            </div>
+        </div>
+            <div class="buttons">
+                
+                           
+                    <button onclick="encriptar()">Encriptar</button>
+                    <button onclick="desencriptar()">Desencriptar</button>
+                
+            </div>
+            </div>
+        
+        
+                        
+        <section>   
+            <textarea id="output-text" readonly placeholder=""></textarea>
+            <img id="muñeco" src="assets/Muñeco.png">
+            <div class="buttons">
+                <button id="copy-button" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+
+        
+</main>
+    <script src="script.js"></script>
+
+    <footer>Desarrollado por Victor Torres Yerena</footer>
+
+</body>
+</html>

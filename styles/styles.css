@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    color: #000000;
+    background-color: rgb(211, 236, 228);
+    background-image: url('../assets/fondo.jpeg');
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Necesario para el pseudo-elemento */
+    z-index: 1; /* Asegura que el contenido esté por encima del overlay */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Color blanco semi-transparente */
+    z-index: -1; /* Coloca el overlay detrás del contenido */
+}
+
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.container {
+    padding: 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    height: 80%;
+    padding: 10px 50px;   
+}
+
+.encriptador {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 80%;
+    gap: 215px;
+    margin: 20px 10px;
+}
+
+.advertencia {
+    display: flex;
+    gap: 10px
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+    background-color: transparent;
+    border-radius: 32px;
+}
+
+section img {
+    width: 60%;
+    transition: opacity 0.5s ease;
+    border-radius: 20px;
+}
+
+section img.hidden {
+    opacity: 0;
+}
+
+textarea {
+    display: flex;
+    width: 80%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color: black;
+    outline: none; /* Elimina el contorno predeterminado al hacer clic */
+    resize: none; /* Esto deshabilita el redimensionamiento manual */
+}
+
+textarea::placeholder {
+    color: black; /* Color de placeholder semi-transparente */
+}
+
+.buttons {
+    display: flex;    
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 24px;
+    align-items: center;
+}
+
+button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      background-color: #90e0ef;
+      border:solid 1px blue;
+      width: 328px;
+      height: 67px;
+      text-align: center;
+      border-radius: 24px;
+      font-size: 1rem;
+      padding: 21.5px 0;
+      color: black;
+    
+}
+
+button:hover {
+    background-color: #00b4d8;
+}
+
+#copy-button {
+    display: none; /* Ocultar el botón inicialmente */
+}
+
+#error-message {
+    color: rgb(204, 12, 12);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+footer {
+    padding: 2% 0% 0% 15%;
+    color: rgb(9, 9, 109);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
